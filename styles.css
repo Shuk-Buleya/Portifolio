@@ -1,0 +1,666 @@
+/* Importing some of the fonts that are going to be needed */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: white;
+
+  /* Declaring Variable colors that are going to be mostry used in the code */
+  --secondary: orange;
+  --secondary2: #ef6e12;
+}
+
+/* styling the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0rem 0.3125rem 0.625rem rgb(0, 0, 0, 0.5);
+  height: 4rem;
+  padding: 2rem 0;
+}
+
+/* Navigation Menu section */
+ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header_logo {
+  text-decoration: none;
+}
+
+.nav_item {
+  margin: 0 0.5rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.header_logo {
+  font-size: 1.5rem;
+  color: var(--secondary2);
+  font-weight: 600;
+}
+
+span {
+  color: white;
+}
+li a:hover,
+li a.active {
+  color: var(--secondary2);
+  transition: 0.3s;
+}
+
+/* Editing the hamburger menu */
+.close,
+.menu {
+  display: none;
+}
+
+/* the very first home page */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+
+/* To Ensure the background styles
+i.e filter property shouldd not affect the text on the home page */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(designer3.jpg);
+  background-size: cover;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+.home p,
+button {
+  margin-top: 3rem;
+}
+
+.home h2 {
+  text-shadow: 0.0625rem 0.1875rem 0.125rem rgba(0, 0, 0, 0.5);
+  font-size: 7rem;
+  color: white;
+}
+
+.home p {
+  font-size: 2rem;
+}
+
+.home button {
+  border: none;
+  padding: 1.2rem 1.6rem;
+  border-radius: 2.5rem;
+  border: 0.125rem solid var(--secondary);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--secondary);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--secondary);
+}
+
+/* Editing the about page */
+.about {
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  overflow: auto;
+}
+
+.about h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.4rem;
+  font-size: 2.3rem;
+  text-shadow: 0.0625rem 0.1875rem 0.125rem rgba(0, 0, 0, 0.5);
+}
+
+.about .mypic img{
+  width: 20rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  box-shadow: 2px 9px 2px rgb(0, 0, 0, 0.3);
+  
+}
+
+/* This is a span class in the about SECTION adding some styles to the span */
+.border-bottom {
+  padding: 0 1rem;
+  border-bottom: 0.1875rem solid var(--secondary2);
+  border-radius: 0.125rem;
+}
+
+/* Contents inside the about section */
+.about .main-container {
+  width: 64%;
+  padding-top: 1.4rem;
+  padding-bottom: 2rem;
+}
+
+.about .intro {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 3rem;
+}
+.about #intro {
+  color: var(--secondary);
+}
+
+.about .infor {
+  margin: 0 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .supporting-container {
+  width: 34%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.4rem;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgb(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+}
+/* a class in the about section inside the supporting container */
+section .personal-infor {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.supporting-container p {
+  margin: 3rem;
+  padding-right: 3rem;
+  border-bottom: 0.0625 solid black;
+}
+
+/* Adding styles to the contact section */
+.contact {
+  padding: 1rem;
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  overflow: auto;
+}
+
+.contact-container {
+  display: flex;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.3rem;
+}
+
+.contact .follow {
+  color: var(--secondary2);
+  margin-bottom: 1rem;
+}
+
+/* Applying styles to the icons in contact section */
+#face,
+#twitter,
+#git,
+#insta {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+#face:hover {
+  color: rgb(18, 18, 170);
+  cursor: pointer;
+}
+
+#twitter:hover {
+  cursor: pointer;
+  color: rgb(2, 154, 214);
+}
+
+#insta:hover {
+  cursor: pointer;
+  color: rgb(202, 18, 49);
+}
+
+#git:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* address section inside the contact section */
+.contact .address {
+  margin-bottom: 1.5rem;
+  color: var(--secondary2);
+}
+
+.contact .note {
+  color: var(--secondary2);
+}
+.contact p {
+  padding-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.address_container {
+  width: 42%;
+  margin-left: 1rem;
+}
+
+
+
+
+/* Since there is only one form in the document, inside the contact section */
+.form {
+  width: 44%;
+  margin-left: 1rem;
+}
+
+.contact #phone,
+#whatsapp,
+#email {
+  margin-right: 0.5rem;
+}
+
+#whatsapp {
+  color: green;
+}
+
+#phone {
+  color: black;
+}
+
+.form #name,
+#message,
+#text {
+  display: block;
+  margin-bottom: 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  background-color: #0a0a0a;
+  color: white;
+}
+.form #name,
+#message {
+  height: 3rem;
+  width: 20rem;
+}
+
+.form #text {
+  width: 20rem;
+  padding: 1rem;
+  height: 9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.form button {
+  border: none;
+  padding: 1rem 1.6rem;
+  border-radius: 2.5rem;
+  border: 0.125rem solid var(--secondary);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--secondary);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+.form button:hover {
+  cursor: pointer;
+  color: white;
+  border: 0.125rem solid white;
+}
+
+/* This is the section that contains the description of the skills i offer */
+.menu_ {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  padding-left: 3rem;
+  background-size: cover;
+  width: 100%;
+  overflow: auto;
+}
+
+.menu_ h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.skills {
+  width: 49%;
+  padding-right: 0.6rem;
+}
+.commercial {
+  width: 49%;
+}
+
+.menu_container {
+  display: flex;
+}
+
+.g-designer,
+.fa-palette {
+  float: left;
+}
+.fa-palette {
+  padding: 2rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+
+.menu_ div {
+  margin-bottom: 2rem;
+}
+.developer,
+.fa-desktop {
+  float: left;
+}
+.fa-desktop {
+  padding: 2rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+.repair,
+.fa-screwdriver-wrench {
+  float: left;
+}
+.fa-screwdriver-wrench {
+  padding: 2rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+
+.lessons,
+.fa-person-chalkboard {
+  float: left;
+}
+
+.fa-person-chalkboard {
+  padding: 2rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+
+.server,
+.fa-server {
+  float: left;
+}
+
+.fa-server {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.drive,
+.fa-hard-drive {
+  float: left;
+}
+.fa-hard-drive {
+  padding: 2rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+
+.menu_ h3,
+.menu_ p {
+  padding-left: 7rem;
+}
+
+.menu_ h3 {
+  color: var(--secondary2);
+}
+
+.menu_ p {
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Specifying the height devices above or equal to 1025px width should take */
+@media (min-width: 1025px) {
+  .home,
+  .contact {
+    height: 100vh;
+  }
+}
+/* Specifying the properties for devices with a width equal to or below 1020px */
+@media screen and (max-width: 1020px) {
+  .about .main-container {
+    width: 50%;
+    padding-top: 1.4rem;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  .about .supporting-container {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Specifying the properties for devices with a width equal to or below 768px */
+@media screen and (max-width: 768px) {
+  header {
+    height: 4rem;
+    justify-content: space-between;
+    padding: 0 1.75rem;
+  }
+
+  .header_logo {
+    font-size: 1.3rem;
+  }
+
+  .menu {
+    display: inline;
+    color: white;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .menu:hover {
+    color: var(--secondary2);
+    cursor: pointer;
+  }
+  .close {
+    position: absolute;
+    right: 2rem;
+    display: block;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+  }
+  .close:hover {
+    color: var(--secondary2);
+    cursor: pointer;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0);
+    right: -100%;
+    color: white;
+    width: 40%;
+    height: 100vh;
+    z-index: 100;
+    transition: 0.7s;
+  }
+  .show {
+    right: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home h2 {
+    margin-top: 6rem;
+    font-size: 5rem;
+  }
+  .home p {
+    font-size: 1.6rem;
+  }
+
+  .nav_item {
+    margin: 2rem 0;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about .main-container {
+    width: 99%;
+    font-size: 0.9rem;
+  }
+
+  .about .supporting-container {
+    width: 90%;
+    margin: auto;
+    padding: 0.2rem 0;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about .mypic img{
+    width: 12rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    
+    
+  }
+  .about .supporting-container p {
+    margin: 1rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+  .about .intro {
+    font-size: 0.9rem;
+  }
+
+  .about .personal-infor {
+    color: var(--secondary);
+  }
+  .menu_ h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills {
+    width: 98%;
+    padding-right: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .commercial {
+    width: 98%;
+    font-size: 0.8rem;
+  }
+  .menu_container {
+    flex-direction: column;
+  }
+
+  .menu_ .fa-solid {
+    padding: 1rem;
+  }
+
+  .menu_ .g-designer,
+  .menu_ .developer,
+  .menu_ .repair {
+    margin-bottom: 0.2rem;
+  }
+
+  .menu_ .commercial {
+    margin-bottom: 0;
+  }
+  .menu_ .lessons,
+  .menu_ .server,
+  .menu_ .drive {
+    margin-bottom: 0.2rem;
+  }
+
+  .contact .address_container {
+    width: 98%;
+  }
+  .contact .form {
+    width: 98%;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .home {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .home h2 {
+    font-size: 3rem;
+  }
+  .home p {
+    font-size: 1.1rem;
+  }
+  .home::before {
+    content: "";
+    background-image: none;
+  }
+}
+
+@media screen and (max-height: 410px) {
+  .home::before {
+    content: "";
+    background-image: none;
+  }
+  body {
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+}
